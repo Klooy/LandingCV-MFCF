@@ -3,687 +3,955 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Felipe Corrales Flórez | Portfolio</title>
+    <title>Michael Felipe Corrales Flórez - Portafolio</title>
     <style>
         :root {
-            --primary: #781D2B;         /* Color del vino */
-            --secondary: #2D2D34;       /* Negro suave como el gato */
-            --light: #F3EDE2;           /* Fondo beige claro de la imagen */
-            --dark: #232323;            /* Negro profundo */
-            --accent: #EEA990;          /* Color rosa/melocotón del fondo */
-            --text: #2D2D34;            /* Color texto principal */
-            --border: #D8CAB8;          /* Color borde suave */
-            --accent2: #E5C4A9;         /* Color secundario del fondo */
+            --primary-color: #1a1a1a; /* Negro principal */
+            --secondary-color: #8b0000; /* Rojo vino */
+            --accent-color: #d4af37; /* Dorado suave, como los ojos del gato */
+            --light-color: #f5f5dc; /* Beige claro */
+            --dark-accent: #3c3c3c; /* Gris oscuro */
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-secondary: 'Calibri', 'Trebuchet MS', sans-serif;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
-            color: var(--text);
+            font-family: var(--font-main);
             line-height: 1.6;
-            background-color: var(--light);
+            color: var(--primary-color);
+            background-color: var(--light-color);
         }
-        
-        header {
-            background-color: var(--secondary);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
+
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 0 20px;
         }
-        
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 2rem 0;
+            position: relative;
+        }
+
         .header-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            gap: 2rem;
         }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
+
+        @media (min-width: 768px) {
+            .header-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .profile-container {
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--accent);
-            margin-bottom: 1rem;
             overflow: hidden;
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
-        
-        .profile-img img {
+
+        .profile-pic {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
-        .name {
+
+        .header-text {
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .header-text {
+                text-align: left;
+                flex: 1;
+                padding-left: 2rem;
+            }
+        }
+
+        .header-text h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            color: var(--light-color);
         }
-        
-        .title {
+
+        .header-text h2 {
             font-size: 1.5rem;
+            font-weight: normal;
+            color: var(--accent-color);
             margin-bottom: 1rem;
-            color: var(--accent);
         }
-        
-        .contact {
-            margin-top: 1rem;
+
+        .contact-links {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
             gap: 1rem;
+            margin-top: 1rem;
+            justify-content: center;
         }
-        
-        .contact-item {
+
+        @media (min-width: 768px) {
+            .contact-links {
+                justify-content: flex-start;
+            }
+        }
+
+        .contact-links a {
+            color: var(--light-color);
+            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            color: white;
-            text-decoration: none;
+            transition: color 0.3s ease;
         }
-        
-        .contact-item:hover {
-            text-decoration: underline;
-            color: var(--accent);
+
+        .contact-links a:hover {
+            color: var(--accent-color);
         }
-        
-        .bio {
+
+        .intro {
+            background-color: var(--dark-accent);
+            color: var(--light-color);
             padding: 2rem 0;
-            background-color: white;
-            border-bottom: 1px solid var(--border);
+            text-align: center;
         }
-        
-        .bio p {
-            text-align: justify;
+
+        .intro p {
             max-width: 800px;
             margin: 0 auto;
+            font-size: 1.1rem;
         }
-        
-        .section {
+
+        /* Main Content Styles */
+        main {
             padding: 3rem 0;
-            border-bottom: 1px solid var(--border);
         }
-        
+
         .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--primary);
-            position: relative;
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .education-item, 
+        .experience-item, 
+        .certification-item {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .education-item:hover, 
+        .experience-item:hover, 
+        .certification-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: var(--primary);
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
         }
-        
-        .skills-grid {
+
+        .item-title {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .item-date {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .item-subtitle {
+            color: var(--dark-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .item-description {
+            margin-top: 0.5rem;
+        }
+
+        .item-description ul {
+            padding-left: 1.5rem;
+        }
+
+        .item-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
-        
+
         .skill-category {
             background-color: white;
-            border-radius: 8px;
             padding: 1.5rem;
+            border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            border-left: 4px solid var(--primary);
         }
-        
-        .skill-category:hover {
-            transform: translateY(-5px);
-            border-left: 4px solid var(--accent);
-        }
-        
+
         .skill-category h3 {
-            color: var(--secondary);
+            color: var(--secondary-color);
             margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--accent-color);
         }
-        
+
         .skill-list {
-            list-style: none;
+            list-style-type: none;
         }
-        
+
         .skill-list li {
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .skill-list li:before {
-            content: '•';
-            color: var(--primary);
-            font-weight: bold;
-        }
-        
-        .experience-timeline {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .timeline-item {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 0.8rem;
             position: relative;
+            padding-left: 1.5rem;
         }
-        
-        .timeline-date {
-            text-align: right;
-            color: var(--primary);
-            font-weight: bold;
-        }
-        
-        .timeline-content {
-            position: relative;
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid var(--primary);
-        }
-        
-        .timeline-content:before {
-            content: '';
+
+        .skill-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-size: 1.5rem;
             position: absolute;
-            left: -10px;
-            top: 20px;
-            width: 0;
-            height: 0;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-right: 10px solid white;
+            left: 0;
+            top: -0.3rem;
         }
-        
-        .timeline-content h3 {
-            margin-bottom: 0.5rem;
-            color: var(--secondary);
-        }
-        
-        .timeline-content h4 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-weight: normal;
-            font-style: italic;
-        }
-        
-        .timeline-content ul {
-            list-style: none;
-        }
-        
-        .timeline-content ul li {
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-        }
-        
-        .timeline-content ul li:before {
-            content: '→';
-            color: var(--primary);
-            font-weight: bold;
-        }
-        
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        
-        .education-item {
-            background-color: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid var(--primary);
-        }
-        
-        .education-item h3 {
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .education-item h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-weight: normal;
-        }
-        
-        .education-item p {
-            color: #666;
-            margin-bottom: 0.5rem;
-        }
-        
-        .education-item .date {
-            font-style: italic;
-            color: var(--primary);
-        }
-        
-        .certifications {
+
+        .additional-skills {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
+            gap: 1rem;
+            margin-top: 1rem;
         }
-        
-        .certification {
-            background-color: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 350px;
+
+        .skill-tag {
+            background-color: var(--dark-accent);
+            color: var(--light-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
-            border-top: 4px solid var(--primary);
+            gap: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            color: var(--light-color);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--accent-color);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--light-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--secondary-color);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-color);
         }
         
-        .certification-icon {
-            width: 60px;
-            height: 60px;
-            background-color: var(--light);
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 1rem;
+            }
+            
+            .profile-container {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .header-text h1 {
+                font-size: 2rem;
+            }
+            
+            .header-text h2 {
+                font-size: 1.2rem;
+            }
+            
+            .item-header {
+                flex-direction: column;
+            }
+            
+            .item-date {
+                margin-top: 0.5rem;
+            }
+        }
+
+        /* Carousel Styles - NUEVO */
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            padding: 0 1rem;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+            gap: 1rem;
+        }
+
+        .carousel-btn {
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            border: none;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        
-        .certification h3 {
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
+
+        .carousel-btn:hover {
+            background-color: var(--primary-color);
+            transform: scale(1.1);
         }
-        
-        .certification p {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-        
-        .certification a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        .certification a:hover {
-            text-decoration: underline;
-        }
-        
-        .cta {
-            text-align: center;
-            padding: 4rem 0;
-            background-color: var(--accent2);
-        }
-        
-        .cta h2 {
-            margin-bottom: 2rem;
-            color: var(--secondary);
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            margin: 0 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-secondary {
-            background-color: var(--secondary);
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        footer {
-            background-color: var(--secondary);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        footer p {
-            margin-bottom: 1rem;
-        }
-        
-        .social-links {
+
+        .carousel-indicators {
             display: flex;
             justify-content: center;
-            gap: 1rem;
             margin-top: 1rem;
+            gap: 0.5rem;
+        }
+
+        .carousel-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--dark-accent);
+            opacity: 0.5;
+            cursor: pointer;
+            transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .carousel-indicator.active {
+            opacity: 1;
+            background-color: var(--secondary-color);
+            transform: scale(1.2);
         }
         
-        .social-link {
-            color: white;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
+        .download-cv {
+        background-color: var(--accent-color);
+        color: var(--primary-color) !important;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
-        
-        .social-link:hover {
-            color: var(--accent);
-            background-color: rgba(255, 255, 255, 0.1);
+
+    .download-cv:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 768px) {
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .download-cv {
+        margin-top: 15px;
+    }
         }
-        
-        @media (max-width: 768px) {
-            .timeline-item {
-                grid-template-columns: 1fr;
-                gap: 0.5rem;
-            }
-            
-            .timeline-date {
-                text-align: left;
-                margin-bottom: 0.5rem;
-            }
-            
-            .timeline-content:before {
-                display: none;
-            }
-            
-            .contact {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
+
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
+    <header id="top">
         <div class="container">
             <div class="header-content">
-                <div class="profile-img">
-                    <img src="/api/placeholder/150/150" alt="Michael Felipe Corrales Flórez" />
+                <div class="profile-container fade-in">
+                    <img src="mishi.jpg" alt="Michael Felipe Corrales Flórez" class="profile-pic">
                 </div>
-                <h1 class="name">Michael Felipe Corrales Flórez</h1>
-                <p class="title">Ingeniero de Sistemas | Desarrollo Web | Análisis de Datos | Ciberseguridad</p>
-                <div class="contact">
-                    <a href="mailto:mfcorrales26@gmail.com" class="contact-item">
-                        <span>✉️</span> mfcorrales26@gmail.com
-                    </a>
-                    <a href="tel:3106226041" class="contact-item">
-                        <span>📱</span> 3106226041
-                    </a>
-                    <a href="https://www.linkedin.com/in/mfcorrales" class="contact-item" target="_blank">
-                        <span>🔗</span> LinkedIn
-                    </a>
-                    <a href="https://my-portfolio-mc.netlify.app/" class="contact-item" target="_blank">
-                        <span>🌐</span> Portfolio
-                    </a>
-                    <span class="contact-item">
-                        <span>📍</span> Popayán, Colombia
-                    </span>
+                <div class="header-text">
+                    <h1 class="fade-in delay-1">Michael Felipe Corrales Flórez</h1>
+                    <h2 class="fade-in delay-2">Ingeniero de Sistemas</h2>
+                    <div class="contact-links fade-in delay-3">
+                        <a href="mailto:mfcorrales26@gmail.com">📧 mfcorrales26@gmail.com</a>
+                        <a href="tel:+573106226041">📱 310 622 6041</a>
+                        <a href="https://www.linkedin.com/in/mfcorrales" target="_blank">🔗 LinkedIn</a>
+                        <a href="https://my-portfolio-mc.netlify.app/" target="_blank">🌐 Portafolio</a>
+                        <a href="CVMFCF.pdf" download class="download-cv">📄 Descargar CV</a>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
-
-    <!-- About Section -->
-    <section class="bio">
+    
+    <section class="intro fade-in delay-4">
         <div class="container">
-            <p>
-                Soy Ingeniero de Sistemas con experiencia en desarrollo web, análisis de datos y ciberseguridad. Me especializo
-                en transformar datos en información valiosa mediante procesos ETL, automatización y visualización de datos
-                con dashboards interactivos. Tengo conocimientos en el desarrollo de aplicaciones web utilizando tecnologías
-                como React, Node.js, Django y Vue.js, además del manejo de bases de datos relacionales y no relacionales
-                (PostgreSQL, MySQL, SQL avanzado), incluyendo modelado, consultas avanzadas y el uso de triggers.
-                Cuento con experiencia en la implementación de sistemas de control y seguridad informática, así como en la
-                protección de datos personales, capacitando a equipos y optimizando procesos para mitigar riesgos. Además,
-                poseo habilidades en el uso de herramientas de desarrollo como Git y GitHub para el control de versiones y
-                gestión de repositorios.
-            </p>
+            <p>Soy Ingeniero de Sistemas con experiencia en desarrollo web, análisis de datos y ciberseguridad. Me especializo 
+                en transformar datos en información valiosa mediante procesos ETL, automatización y visualización de datos 
+                con dashboards interactivos. Tengo conocimientos en el desarrollo de aplicaciones web utilizando tecnologías 
+                como React, Node.js, y Vue.js, además del manejo de bases de datos relacionales y no relacionales 
+                (PostgreSQL, MySQL, SQL avanzado), incluyendo modelado, consultas avanzadas y el uso de triggers. 
+                Cuento con experiencia en la implementación de sistemas de control y seguridad informática, así como en la 
+                protección de datos personales, capacitando a equipos y optimizando procesos para mitigar riesgos. Además, 
+                poseo habilidades en el uso de herramientas de desarrollo como Git y GitHub para el control de versiones y 
+                gestión de repositorios. </p>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="section" id="skills">
-        <div class="container">
-            <h2 class="section-title">Habilidades Técnicas</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><span>💻</span> Lenguajes de Programación</h3>
-                    <ul class="skill-list">
-                        <li>Python</li>
-                        <li>JavaScript</li>
-                        <li>Java</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><span>🌐</span> Desarrollo Web</h3>
-                    <ul class="skill-list">
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>Django</li>
-                        <li>Vue.js</li>
-                        <li>WordPress</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><span>🗄️</span> Bases de Datos</h3>
-                    <ul class="skill-list">
-                        <li>PostgreSQL</li>
-                        <li>MySQL</li>
-                        <li>SQL Avanzado</li>
-                        <li>Modelado de datos</li>
-                        <li>Procesos ETL</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><span>🔒</span> Ciberseguridad</h3>
-                    <ul class="skill-list">
-                        <li>Protección de datos personales</li>
-                        <li>Implementación de sistemas de seguridad</li>
-                        <li>Capacitación en seguridad</li>
-                        <li>Mitigación de riesgos</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><span>🛠️</span> Herramientas</h3>
-                    <ul class="skill-list">
-                        <li>Git y GitHub</li>
-                        <li>AWS</li>
-                        <li>Control de versiones</li>
-                        <li>Despliegue de aplicaciones</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><span>📊</span> Análisis de Datos</h3>
-                    <ul class="skill-list">
-                        <li>Dashboards interactivos</li>
-                        <li>Visualización de datos</li>
-                        <li>Generación de informes</li>
-                        <li>Automatización de procesos</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-        <div class="container">
-            <h2 class="section-title">Experiencia Profesional</h2>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        Enero 2024 - Febrero 2025
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Analista de Datos</h3>
-                        <h4>Fundación Pro-Regiones Colombia, San Juan de Pasto</h4>
-                        <ul>
-                            <li>Creé informes y reportes estadísticos sobre los avances en procesos internos de la organización.</li>
-                            <li>Documenté de manera detallada cada proceso realizado, optimizando la trazabilidad de la información.</li>
-                            <li>Utilicé Excel y otros recursos tecnológicos avanzados para la generación de reportes.</li>
-                            <li>Administré y gestioné bases de datos en SQL, realizando consultas, actualizaciones y mantenimiento.</li>
-                            <li>Diseñé y optimicé consultas en SQL para la extracción y análisis de datos.</li>
-                            <li>Creé dashboards interactivos para la visualización y seguimiento de indicadores clave.</li>
-                            <li>Automaticé procesos mediante herramientas digitales para mejorar la eficiencia operativa.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        Abril 2022 - Mayo 2023
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Asistente de Soporte TI</h3>
-                        <h4>Ambiental & Logística San Juan SAS, Pasto - Nariño</h4>
-                        <ul>
-                            <li>Realicé mantenimiento y soporte de equipos informáticos, garantizando el correcto funcionamiento del parque tecnológico.</li>
-                            <li>Diagnostiqué y solucioné incidencias en hardware y software, proporcionando atención oportuna a los usuarios.</li>
-                            <li>Configuré y administré redes locales, incluyendo la instalación y actualización de dispositivos de comunicación.</li>
-                            <li>Gestioné cuentas de usuario y permisos en los sistemas internos para asegurar la seguridad operativa.</li>
-                            <li>Asistí en la implementación y actualización de sistemas operativos y aplicaciones.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        Febrero 2021 - Agosto 2021
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Auxiliar de Soporte TI</h3>
-                        <h4>Fundación Cangagua, Guadalajara de Buga - Valle del Cauca</h4>
-                        <ul>
-                            <li>Elaboré reportes básicos de incidencias y solicitudes de soporte.</li>
-                            <li>Registré y documenté fallas y requerimientos técnicos presentados por los usuarios.</li>
-                            <li>Utilicé herramientas informáticas (Excel) para el seguimiento y control de incidencias.</li>
-                            <li>Ejecuté labores de mantenimiento preventivo y correctivo en equipos y sistemas bajo supervisión.</li>
-                            <li>Brindé atención y soporte técnico a usuarios en la instalación, configuración y actualización de software y hardware.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="section" id="education">
-        <div class="container">
+    <main class="container">
+        <!-- Sección de Educación con Carrusel -->
+        <section class="section fade-in">
             <h2 class="section-title">Educación</h2>
-            <div class="education-grid">
-                <div class="education-item">
-                    <h3>Ingeniería de Sistemas</h3>
-                    <h4>Universidad de Pamplona</h4>
-                    <p>Villa del Rosario, Norte de Santander</p>
-                    <p>Lineamientos para el uso eficiente de herramientas de Inteligencia Artificial en las empresas de Colombia.</p>
-                    <p class="date">Octubre 2024</p>
+            
+            <div class="carousel" id="education-carousel">
+                <div class="carousel-container">
+                    <!-- Elemento 1 del carrusel -->
+                    <div class="carousel-item">
+                        <div class="education-item">
+                            <div class="item-header">
+                                <span class="item-title">Ingeniería de Sistemas</span>
+                                <span class="item-date">Octubre 2024</span>
+                            </div>
+                            <div class="item-subtitle">Universidad de Pamplona, Villa del Rosario – Norte de Santander</div>
+                            <div class="item-description">
+                                <p>Lineamientos para el uso eficiente de herramientas de Inteligencia Artificial en las empresas de Colombia.</p>
+                                <p>Asignaturas Relevantes: Ingeniería del Software – Algoritmos Numéricos – Seguridad Informática</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Elemento 2 del carrusel -->
+                    <div class="carousel-item">
+                        <div class="education-item">
+                            <div class="item-header">
+                                <span class="item-title">Diplomado en Minería de Datos Inteligente y Seguridad de Sistemas</span>
+                                <span class="item-date">Octubre 2024</span>
+                            </div>
+                            <div class="item-subtitle">Universidad de Pamplona, Villa del Rosario – Norte de Santander</div>
+                            <div class="item-description">
+                                <p>Formas especialistas en análisis avanzado de datos y ciberseguridad, combinando minería de datos, aprendizaje automático y protección de la información.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Elemento 3 del carrusel -->
+                    <div class="carousel-item">
+                        <div class="education-item">
+                            <div class="item-header">
+                                <span class="item-title">Diplomado en Protección de Datos Personales y Ciberseguridad</span>
+                                <span class="item-date">Julio 2025 (10 semanas)</span>
+                            </div>
+                            <div class="item-subtitle">Universidad Javeriana de Cali, Colombia</div>
+                            <div class="item-description">
+                                <p>Enfocado en la normatividad colombiana y la optimización de procesos para garantizar el cumplimiento en protección de datos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Elemento 4 del carrusel -->
+                    <div class="carousel-item">
+                        <div class="education-item">
+                            <div class="item-header">
+                                <span class="item-title">Bachillerato – Técnico en auxiliar contable</span>
+                                <span class="item-date">Noviembre 2016</span>
+                            </div>
+                            <div class="item-subtitle">Minuto de Dios Policarpa Salavarrieta, Cúcuta – Norte de Santander</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="education-item">
-                    <h3>Diplomado en Minería de Datos Inteligente y Seguridad de Sistemas</h3>
-                    <h4>Universidad de Pamplona</h4>
-                    <p>Villa del Rosario, Norte de Santander</p>
-                    <p>Formas especialistas en análisis avanzado de datos y ciberseguridad, combinando minería de datos, aprendizaje automático y protección de la información.</p>
-                    <p class="date">Octubre 2024</p>
+                
+                <!-- Controles del carrusel -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" data-carousel="education-carousel">&#10094;</button>
+                    <button class="carousel-btn next" data-carousel="education-carousel">&#10095;</button>
                 </div>
-                <div class="education-item">
-                    <h3>Diplomado en Protección de Datos Personales y Ciberseguridad</h3>
-                    <h4>Universidad Javeriana de Cali</h4>
-                    <p>Cali, Colombia</p>
-                    <p>Enfocado en la normatividad colombiana y la optimización de procesos para garantizar el cumplimiento en protección de datos.</p>
-                    <p class="date">Julio 2025 (10 semanas)</p>
-                </div>
-                <div class="education-item">
-                    <h3>Bachillerato - Técnico en auxiliar contable</h3>
-                    <h4>Minuto de Dios Policarpa Salavarrieta</h4>
-                    <p>Cúcuta, Norte de Santander</p>
-                    <p class="date">Noviembre 2016</p>
+                
+                <!-- Indicadores de posición -->
+                <div class="carousel-indicators" id="education-indicators">
+                    <span class="carousel-indicator active" data-carousel="education-carousel" data-index="0"></span>
+                    <span class="carousel-indicator" data-carousel="education-carousel" data-index="1"></span>
+                    <span class="carousel-indicator" data-carousel="education-carousel" data-index="2"></span>
+                    <span class="carousel-indicator" data-carousel="education-carousel" data-index="3"></span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Certifications Section -->
-    <section class="section" id="certifications">
-        <div class="container">
+        <section class="section fade-in">
+            <h2 class="section-title">Experiencia Profesional</h2>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="item-title">Analista de Datos</span>
+                    <span class="item-date">Enero 2024 – Febrero 2025</span>
+                </div>
+                <div class="item-subtitle">Fundación Pro-Regiones Colombia, San Juan de Pasto, Colombia</div>
+                <div class="item-description">
+                    <ul>
+                        <li>Creé informes y reportes estadísticos sobre los avances en procesos internos de la organización.</li>
+                        <li>Documenté de manera detallada cada proceso realizado, optimizando la trazabilidad de la información.</li>
+                        <li>Utilicé Excel y otros recursos tecnológicos avanzados para la generación de reportes.</li>
+                        <li>Administré y gestioné bases de datos en SQL, realizando consultas, actualizaciones y mantenimiento de la información.</li>
+                        <li>Diseñé y optimicé consultas en SQL para la extracción y análisis de datos.</li>
+                        <li>Ejecuté labores de mantenimiento preventivo y correctivo en equipos y sistemas de la empresa.</li>
+                        <li>Brindé soporte técnico y asistencia en la optimización de procesos tecnológicos y operativos.</li>
+                        <li>Creé dashboards interactivos para la visualización y seguimiento de indicadores clave.</li>
+                        <li>Automaticé procesos mediante herramientas digitales para mejorar la eficiencia operativa.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="item-title">Asistente de Soporte TI</span>
+                    <span class="item-date">Abril 2022 – Mayo 2023</span>
+                </div>
+                <div class="item-subtitle">Ambiental & Logística San Juan SAS, Pasto - Nariño, Colombia</div>
+                <div class="item-description">
+                    <ul>
+                        <li>Realicé mantenimiento y soporte de equipos informáticos, garantizando el correcto funcionamiento del parque tecnológico.</li>
+                        <li>Diagnostiqué y solucioné incidencias en hardware y software, proporcionando atención oportuna a los usuarios.</li>
+                        <li>Configuré y administré redes locales, incluyendo la instalación y actualización de dispositivos de comunicación.</li>
+                        <li>Gestioné cuentas de usuario y permisos en los sistemas internos para asegurar la seguridad operativa.</li>
+                        <li>Asistí en la implementación y actualización de sistemas operativos y aplicaciones en colaboración con el área de Ingeniería de Sistemas.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="item-title">Auxiliar de Soporte TI</span>
+                    <span class="item-date">Febrero 2021 – Agosto 2021</span>
+                </div>
+                <div class="item-subtitle">Fundación Cangagua, Guadalajara de Buga, Valle del Cauca, Colombia</div>
+                <div class="item-description">
+                    <ul>
+                        <li>Elaboré reportes básicos de incidencias y solicitudes de soporte.</li>
+                        <li>Registré y documenté fallas y requerimientos técnicos presentados por los usuarios.</li>
+                        <li>Utilicé herramientas informáticas (Excel) para el seguimiento y control de incidencias.</li>
+                        <li>Ejecuté labores de mantenimiento preventivo y correctivo en equipos y sistemas bajo supervisión.</li>
+                        <li>Brindé atención y soporte técnico a usuarios en la instalación, configuración y actualización de software y hardware.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section fade-in">
             <h2 class="section-title">Certificaciones</h2>
-            <div class="certifications">
-                <div class="certification">
-                    <div class="certification-icon">G</div>
-                    <h3>Google IT Support Certificate</h3>
-                    <p>Octubre 2024</p>
+            
+            <div class="certification-item">
+                <div class="item-header">
+                    <span class="item-title">Google IT Support Certificate</span>
+                    <span class="item-date">Octubre 2024</span>
+                </div>
+                <div class="item-description">
                     <a href="https://coursera.org/verify/69YGBHYW1D7L" target="_blank">Ver Certificado</a>
                 </div>
-                <div class="certification">
-                    <div class="certification-icon">G</div>
-                    <h3>Google Data Analytics Certificate</h3>
-                    <p>Diciembre 2024</p>
+            </div>
+            
+            <div class="certification-item">
+                <div class="item-header">
+                    <span class="item-title">Google Data Analytics Certificate</span>
+                    <span class="item-date">Diciembre 2024</span>
+                </div>
+                <div class="item-description">
                     <a href="https://coursera.org/verify/94TJ9HTJMA2R" target="_blank">Ver Certificado</a>
                 </div>
             </div>
-        </div>
-    </section>
+            
+            <div class="certification-item">
+                <div class="item-header">
+                    <span class="item-title">Google AI Essentials</span>
+                    <span class="item-date">Octubre 2024</span>
+                </div>
+                <div class="item-description">
+                    <a href="https://coursera.org/verify/IS8KCIU51FRA" target="_blank">Ver Certificado</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Additional Skills Section -->
-    <section class="section" id="additional-skills">
-        <div class="container">
+        <!-- Sección de Habilidades Técnicas con Carrusel -->
+        <section class="section fade-in">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            
+            <div class="carousel" id="skills-carousel">
+                <div class="carousel-container">
+                    <!-- Elemento 1 del carrusel -->
+                    <div class="carousel-item">
+                        <div class="skill-category">
+                            <h3><span>💻</span> Lenguajes de Programación</h3>
+                            <ul class="skill-list">
+                                <li>Java</li>
+                                <li>JavaScript</li>
+                                <li>Python</li>
+                                <li>PHP</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Elemento 2 del carrusel -->
+                    <div class="carousel-item">
+                        <div class="skill-category">
+                            <h3><span>🌐</span> Desarrollo Web</h3>
+                            <ul class="skill-list">
+                                <li>HTML, CSS</li>
+                                <li>React</li>
+                                <li>Node.js</li>
+                                <li>Django</li>
+                                <li>Vue.js</li>
+                                <li>WordPress</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Elemento 3 del carrusel -->
+                    <div class="carousel-item">
+                        <div class="skill-category">
+                            <h3><span>🗄️</span> Bases de Datos</h3>
+                            <ul class="skill-list">
+                                <li>PostgreSQL</li>
+                                <li>MySQL</li>
+                                <li>SQL avanzado</li>
+                                <li>Triggers</li>
+                                <li>Procesos ETL</li>
+                                <li>Modelado de datos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Elemento 4 del carrusel -->
+                    <div class="carousel-item">
+                        <div class="skill-category">
+                            <h3><span>👨‍🔧</span>Soporte TI</h3>
+                            <ul class="skill-list">
+                                <li>Mantenimiento de equipos</li>
+                                <li>Configuración de redes</li>
+                                <li>Diagnóstico de fallas</li>
+                                <li>Automatización de procesos</li>
+                                <li>Monitorización de sistemas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Elemento 5 del carrusel -->
+                    <div class="carousel-item">
+                        <div class="skill-category">
+                            <h3><span>🛠️</span>Herramientas y Tecnologías</h3>
+                            <ul class="skill-list">
+                                <li>Git y GitHub</li>
+                                <li>AWS</li>
+                                <li>Control de versiones</li>
+                                <li>Despliegue de aplicaciones</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Elemento 6 del carrusel -->
+                    <div class="carousel-item">
+                        <div class="skill-category">
+                            <h3><span>📊</span> Análisis de Datos</h3>
+                            <ul class="skill-list">
+                                <li>Excel avanzado</li>
+                                <li>Power BI</li>
+                                <li>Tableau</li>
+                                <li>Dashboards interactivos</li>
+                                <li>Generación de informes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Elemento 7 del carrusel -->
+                    <div class="carousel-item">
+                        <div class="skill-category">
+                            <h3><span>🔒</span>Ciberseguridad y Protección de Datos</h3>
+                            <ul class="skill-list">
+                                <li>Estrategias de protección de datos</li>
+                                <li>Sistemas de monitorización</li>
+                                <li>Técnicas de ciberseguridad</li>
+                                <li>Reducción de vulnerabilidades</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controles del carrusel -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" data-carousel="skills-carousel">&#10094;</button>
+                    <button class="carousel-btn next" data-carousel="skills-carousel">&#10095;</button>
+                </div>
+                
+                <!-- Indicadores de posición -->
+                <div class="carousel-indicators" id="skills-indicators">
+                    <span class="carousel-indicator active" data-carousel="skills-carousel" data-index="0"></span>
+                    <span class="carousel-indicator" data-carousel="skills-carousel" data-index="1"></span>
+                    <span class="carousel-indicator" data-carousel="skills-carousel" data-index="2"></span>
+                    <span class="carousel-indicator" data-carousel="skills-carousel" data-index="3"></span>
+                    <span class="carousel-indicator" data-carousel="skills-carousel" data-index="4"></span>
+                    <span class="carousel-indicator" data-carousel="skills-carousel" data-index="5"></span>
+                    <span class="carousel-indicator" data-carousel="skills-carousel" data-index="6"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section fade-in">
             <h2 class="section-title">Habilidades Adicionales</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><span>🧠</span> Habilidades Profesionales</h3>
-                    <ul class="skill-list">
-                        <li>Análisis de datos y solución de problemas técnicos</li>
-                        <li>Comunicación efectiva y trabajo en equipo</li>
-                        <li>Proactividad y constante aprendizaje</li>
-                        <li>Liderazgo potencial y atención al detalle</li>
-                    </ul>
+            
+            <div class="additional-skills">
+                <div class="skill-tag">Comunicación efectiva</div>
+                <div class="skill-tag">Trabajo en equipo</div>
+                <div class="skill-tag">Proactividad</div>
+                <div class="skill-tag">Aprendizaje constante</div>
+                <div class="skill-tag">Liderazgo potencial</div>
+                <div class="skill-tag">Atención al detalle</div>
+                <div class="skill-tag">Manejo de incidencias</div>
+                <div class="skill-tag">Solución de errores</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Michael Felipe Corrales Flórez. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mfcorrales" class="social-link" target="_blank">LinkedIn</a>
+                    <a href="https://my-portfolio-mc.netlify.app/" class="social-link" target="_blank">Portafolio</a>
+                    <a href="mailto:mfcorrales26@gmail.com" class="social-link">Email</a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta">
-        <div class="container">
-            <h2>¿Interesado en colaborar o saber más?</h2>
-            <a href="mailto:mfcorrales26@gmail.com" class="btn">Contactarme</a>
-            <a href="https://my-portfolio-mc.netlify.app/" class="btn btn-secondary" target="_blank">Ver Portafolio Completo</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2025 Michael Felipe Corrales Flórez. Todos los derechos reservados.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/mfcorrales" class="social-link" target="_blank">LinkedIn</a>
-                <a href="https://github.com" class="social-link" target="_blank">GitHub</a>
-            </div>
-        </div>
     </footer>
+
+    <a href="#top" class="back-to-top" id="backToTop">↑</a>
+
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Fade-in animation for sections when scrolling
+        const fadeElems = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                    fadeInObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        fadeElems.forEach(elem => {
+            elem.style.opacity = 0;
+            elem.style.transform = 'translateY(20px)';
+            elem.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            fadeInObserver.observe(elem);
+        });
+
+        // Carrusel functionality
+document.addEventListener('DOMContentLoaded', () => {
+    // Inicializar todos los carruseles en la página
+    const carousels = document.querySelectorAll('.carousel');
+    
+    carousels.forEach(carousel => {
+        const container = carousel.querySelector('.carousel-container');
+        const items = carousel.querySelectorAll('.carousel-item');
+        const prevBtn = carousel.querySelector('.prev');
+        const nextBtn = carousel.querySelector('.next');
+        const indicators = carousel.querySelectorAll('.carousel-indicator');
+        const carouselId = carousel.id;
+        
+        let currentIndex = 0;
+        const totalItems = items.length;
+        
+        // Función para mover el carrusel a un índice específico
+        const moveToIndex = (index) => {
+            if (index < 0) index = totalItems - 1;
+            if (index >= totalItems) index = 0;
+            
+            currentIndex = index;
+            const translateValue = -index * 100 + '%';
+            container.style.transform = 'translateX(' + translateValue + ')';
+            
+            // Actualizar indicadores
+            indicators.forEach((indicator, i) => {
+                if (i === currentIndex) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        };
+        
+        // Event listeners para los botones de navegación
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                moveToIndex(currentIndex - 1);
+            });
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                moveToIndex(currentIndex + 1);
+            });
+        }
+        
+        // Event listeners para los indicadores
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                moveToIndex(index);
+            });
+        });
+        
+        // Inicializar el carrusel
+        moveToIndex(0);
+    });
+});
+    </script>
 </body>
 </html>
