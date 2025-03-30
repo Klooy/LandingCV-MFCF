@@ -1,6 +1,6 @@
 # Portafolio Personal - Michael Felipe Corrales Flórez
 
-![Banner del Portafolio](mishi_400x400.jpg)
+![Banner del Portafolio](mishi-400x400.jpg)
 
 ## 📋 Descripción
 
