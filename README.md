@@ -95,9 +95,9 @@ El sitio implementa carruseles personalizados para mostrar información en secci
 ## 🔄 Mejoras Futuras
 
 - [ ] Implementar sección de proyectos con capturas de pantalla y enlaces
-- ✅ Añadir un formulario de contacto funcional
+✅ Añadir un formulario de contacto funcional
 - [ ] Implementar opción de cambio de idioma (Español/Inglés)
-- ✅ Implementar modo Claro/Oscuro
+✅ Implementar modo Claro/Oscuro
 - [ ] Incorporar filtros para habilidades y experiencia
 - [ ] Optimizar carga de imágenes con lazy loading
 - [ ] Añadir gráficos interactivos para visualizar competencias
