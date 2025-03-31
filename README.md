@@ -37,7 +37,7 @@ Este repositorio contiene el código fuente de mi portafolio personal como Ingen
 
 ## 🖥️ Vista Previa
 
-![Vista previa del portafolio](https://via.placeholder.com/800x400/1a1a1a/d4af37?text=Vista+Previa+del+Portafolio)
+![Vista previa del portafolio](https://landingportfoliomc.netlify.app/landingmfcf)
 
 ## 📦 Estructura del Proyecto
 
