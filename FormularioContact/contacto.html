@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Michael Felipe Corrales Flórez</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="contact-styles.css">
+</head>
+<body>
+    <header class="form-header">
+        <div class="container">
+            <h1>Contacto</h1>
+            <p>¿Tienes alguna pregunta o propuesta? ¡Contáctame!</p>
+            <a href="../LandingMFCF.html" class="back-link">← Volver al portafolio</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="contact-section">
+            <div class="contact-info">
+                <h2>Información de Contacto</h2>
+                <div class="contact-item">
+                    <div class="icon">📧</div>
+                    <div class="info">
+                        <h3>Email</h3>
+                        <p>mfcorrales26@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">📱</div>
+                    <div class="info">
+                        <h3>Teléfono</h3>
+                        <p>310 622 6041</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">🔗</div>
+                    <div class="info">
+                        <h3>LinkedIn</h3>
+                        <p><a href="https://www.linkedin.com/in/mfcorrales" target="_blank">linkedin.com/in/mfcorrales</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">💻</div>
+                    <div class="info">
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/Klooy" target="_blank">github.com/Klooy</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Asunto</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Enviar mensaje</button>
+                
+                <div id="formStatus" class="form-status"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Michael Felipe Corrales Flórez. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <script src="../LandingScript.js"></script>
+    <script src="contact-script.js"></script>
+</body>
+</html>
