@@ -7,47 +7,50 @@
     <link rel="stylesheet" href="AkatsukiThemeLogin.css">
 </head>
 <body>
-        <!-- Akatsuki cloud images -->
-    <img src="../Recursos/cloud.png" alt="Akatsuki Cloud" class="akatsuki-cloud cloud-left-top">
-    <img src="../Recursos/cloud.png" alt="Akatsuki Cloud" class="akatsuki-cloud cloud-left-bottom">
-    <img src="../Recursos/cloud.png" alt="Akatsuki Cloud" class="akatsuki-cloud cloud-right-bottom">
-    <img src="../Recursos/cloudnitgh.png" alt="Akatsuki Cloud" class="akatsuki-cloud cloud-below-itachi">
-    
-    <div class="login-container">
-        <div class="akatsuki-header">
-            <div class="itachi-image-container">
-                <img src="../Recursos/mc.jpg" alt="Itachi Uchiha" class="itachi-image">
-            </div>
-            <h1 class="login-title">LOGIN TO YOUR ACCOUNT</h1>
-        </div>
-        <p class="login-subtitle">Enter your email below to login to your account</p>
-        <form>
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" class="input-field" value="m@example.com">
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <div class="password-container">
-                    <input type="password" id="password" class="input-field">
-                    <span class="toggle-password" id="togglePassword"></span>
+    <!-- Añadido el contenedor login-frame que ahora contiene las nubes -->
+    <div class="login-frame">
+        <!-- Imágenes de nubes Akatsuki ahora dentro del login-frame -->
+        <img src="../Recursos/cloud.png" alt="Akatsuki Cloud" class="akatsuki-cloud cloud-left-top">
+        <img src="../Recursos/cloud.png" alt="Akatsuki Cloud" class="akatsuki-cloud cloud-left-bottom">
+        <img src="../Recursos/cloud.png" alt="Akatsuki Cloud" class="akatsuki-cloud cloud-right-bottom">
+        <img src="../Recursos/cloudnitgh.png" alt="Akatsuki Cloud" class="akatsuki-cloud cloud-below-itachi">
+        
+        <div class="login-container">
+            <div class="akatsuki-header">
+                <div class="itachi-image-container">
+                    <img src="../Recursos/mc.jpg" alt="Itachi Uchiha" class="itachi-image">
                 </div>
-                <a href="#" class="forgot-password">Forgot your <span style="color: #e4000f;">password</span>?</a>
+                <h1 class="login-title">LOGIN TO YOUR ACCOUNT</h1>
             </div>
-            <button type="submit" class="login-button">LOGIN</button>
-        </form>
-        <div class="separator-container">
-            <div class="separator-line"></div>
-            <p class="separator">Or continue <span style="font-weight: bold">with</span></p>
-            <div class="separator-line"></div>
+            <p class="login-subtitle">Enter your email below to login to your account</p>
+            <form>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="input-field" value="m@example.com">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" class="input-field">
+                        <span class="toggle-password" id="togglePassword"></span>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot your <span style="color: #e4000f;">password</span>?</a>
+                </div>
+                <button type="submit" class="login-button">LOGIN</button>
+            </form>
+            <div class="separator-container">
+                <div class="separator-line"></div>
+                <p class="separator">Or continue <span style="font-weight: bold">with</span></p>
+                <div class="separator-line"></div>
+            </div>
+            <button class="github-login-button">
+                <span class="github-icon"></span>
+                LOGIN WITH GITHUB
+            </button>
+            <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
         </div>
-        <button class="github-login-button">
-            <span class="github-icon"></span>
-            LOGIN WITH GITHUB
-        </button>
-        <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
     </div>
 
-    <script src="AkatsukiThemeLogin.js"></script> </body>
+    <script src="AkatsukiThemeLogin.js"></script>
 </body>
 </html>
