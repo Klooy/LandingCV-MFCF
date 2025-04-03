@@ -8,6 +8,11 @@
 }
 
 body {
+    background-image: url('../LoginTheme/Recursos/akatsuki.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: sans-serif;
     background-color: #000;
     color: #ccc;
