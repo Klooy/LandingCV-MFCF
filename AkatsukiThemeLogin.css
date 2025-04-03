@@ -1,0 +1,307 @@
+@font-face {
+    font-family: 'Bolton Serif Regular';
+    src: url('../LoginTheme/Fonts/Bolton\ Serif\ Regular.woff2') format('woff2'),
+         url('../LoginTheme/Fonts/Bolton\ Serif\ Regular.woff') format('woff'),
+         url('../LoginTheme/Fonts/Bolton\ Serif\ Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #000;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.login-container {
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    width: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.akatsuki-header {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.itachi-image-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 50px;
+    border: 3px solid #e4000f;
+    position: relative;
+    z-index: 2;
+}
+
+/* Círculo rojo alrededor de Itachi */
+.itachi-image-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid #e4000f;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.itachi-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.login-title {
+    font-family:'Bolton Serif Regular', sans-serif;
+    font-size: 4em;
+    color: #e4000f;
+    margin-bottom: -15px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-stretch: condensed;
+    line-height: 1;
+}
+
+.login-subtitle {
+    color: #e4000f;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: normal;
+    opacity: 0.7;
+}
+
+.input-group {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    color: #e4000f;
+    margin-bottom: 8px;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: sans-serif;
+    opacity: 0.7;
+}
+
+.input-field {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #e4000f;
+    background-color: transparent;
+    color: #E07A5F; /* Color del valor del campo */
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: sans-serif;
+}
+
+#email::placeholder, #password::placeholder {
+    color: rgba(228, 0, 15, 0.5);
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+.forgot-password {
+    float: right;
+    font-size: 0.9em;
+    color: #777;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+.forgot-password:hover {
+    color: #e4000f;
+}
+
+.login-button {
+    font-family: 'Bolton Serif Regular', sans-serif;
+    background-color: transparent;
+    color: #e4000f;
+    padding: 1px 10px;
+    border: 2px solid #e4000f;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 3em;
+    width: 100%;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.login-button:hover {
+    background-color: rgba(228, 0, 15, 0.2);
+}
+
+.separator-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.separator-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #777;
+}
+
+.separator {
+    color: #777;
+    padding: 0 10px;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: sans-serif;
+}
+
+.github-login-button {
+    font-family: 'Bolton Serif Regular', sans-serif;
+    background-color: #000;
+    color: #e4000f;
+    padding: 3px 10px;
+    border: 2px solid #e4000f;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.github-login-button:hover {
+    background-color: rgba(228, 0, 15, 0.2);
+}
+
+.github-icon {
+    width: 25px;
+    height: 25px;
+    background-color: #e4000f;
+    mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/github.svg') no-repeat center;
+    -webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/github.svg') no-repeat center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+}
+
+.signup-link {
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #777;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+.signup-link a {
+    color: #e4000f;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Akatsuki clouds positioning */
+.akatsuki-cloud {
+    position: absolute;
+    width: 120px;
+    z-index: -2; /* Para que la nube esté detrás del contenido del login si es necesario */
+}
+
+.cloud-left-top {
+    top: 140px;
+    left: 200px;
+}
+
+.cloud-left-bottom {
+    bottom: 170px;
+    left: 195px;
+}
+
+.cloud-right-bottom {
+    bottom: 90px;
+    right: 210px;
+}
+
+.cloud-below-itachi {
+    position: absolute;
+    width: 150px; /* Asegura que tenga el mismo ancho que las otras nubes */
+    z-index: 2; /* Un valor mayor que el z-index del login-container (que es 1) */
+    top: 190px; /* Ajusta este valor para colocar la nube debajo de la imagen de Itachi */
+    left: 49%; /* Centra la nube horizontalmente */
+    transform: translateX(-50%); /* Ajusta el centrado horizontal */
+}
+
+/* Media Queries para pantallas más pequeñas (móviles) */
+@media screen and (max-width: 767px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+    .login-title {
+        font-size: 2.5em;
+        margin-bottom: -8px;
+    }
+    .itachi-image-container {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+    .login-subtitle {
+        font-size: 0.8em;
+        margin-bottom: 15px;
+    }
+    .login-button {
+        font-size: 1.8em;
+        padding: 6px 12px;
+        margin-top: 10px;
+    }
+    .github-login-button {
+        font-size: 30px;
+        padding: 6px 12px;
+        gap: 8px;
+    }
+    .github-icon {
+        width: 18px;
+        height: 18px;
+    }
+    .akatsuki-cloud {
+        width: 60px;
+    }
+    .cloud-left-top {
+        top: 10px;
+        left: 10px;
+    }
+    .cloud-left-bottom {
+        bottom: 10px;
+        left: 5px;
+    }
+    .cloud-right-bottom {
+        bottom: 20px;
+        right: 10px;
+    }
+    .cloud-below-itachi {
+        width: 80px;
+        top: 100px;
+    }
+}
