@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Bolton Serif Regular';
-    src: url('../Fonts/BoltonSerifRegular.woff2') format('woff2'),
-         url('../Fonts/BoltonSerifRegular.woff') format('woff'),
-         url('../Fonts/BoltonSerifRegular.ttf') format('truetype');
+    src: url('../LoginTheme/Fonts/Bolton\ Serif\ Regular.woff2') format('woff2'),
+         url('../LoginTheme/Fonts/Bolton\ Serif\ Regular.woff') format('woff'),
+         url('../LoginTheme/Fonts/Bolton\ Serif\ Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    background-image: url('../Recursos/akatsuki.jpg');
+    background-image: url('../LoginTheme/Recursos/akatsuki.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -292,12 +292,12 @@ body {
 }
 
 .cloud-left-bottom {
-    bottom: clamp(45px, 7vw, 70px);
-    left: clamp(-20px, 0.5vw, 5px);
+    bottom: clamp(85px, 7vw, 115px);
+    left: clamp(-25px, 0.5vw, 5px);
 }
 
 .cloud-right-bottom {
-    bottom: clamp(-45px, 1vw, 10px);
+    bottom: clamp(-45px, 1vw, 20px);
     right: clamp(5px, 2vw, 20px);
 }
 
@@ -307,6 +307,41 @@ body {
     left: 47%;
     transform: translateX(-50%);
     z-index: 2;
+}
+
+/* Contenedor principal para agrupar login-frame y personal-brand */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Personal branding footer */
+.personal-brand {
+    font-family: 'Bolton Serif Regular', sans-serif;
+    text-align: center;
+    margin-top: clamp(15px, 2vw, 20px);
+    padding-bottom: clamp(10px, 1.5vw, 15px);
+    position: relative;
+    z-index: 2;
+}
+
+.personal-brand a {
+    color: #fff;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: clamp(0.9em, 1.2vw, 1.1em);
+    letter-spacing: clamp(0.5px, 0.1vw, 1px);
+    text-shadow: 0 0 clamp(5px, 1vw, 10px) rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.personal-brand a:hover {
+    color: #e4000f;
+    text-shadow: 0 0 clamp(8px, 1.5vw, 15px) rgba(228, 0, 15, 0.6);
+    transform: scale(1.05);
 }
 
 /* Media Queries ajustadas pero mantenidas para compatibilidad con navegadores antiguos */
