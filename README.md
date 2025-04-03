@@ -1,119 +1,85 @@
-# Portafolio Personal - Michael Felipe Corrales Flórez
+# Akatsuki Theme Login Creado Por Michael Felipe Corrales Florez
 
-![Banner del Portafolio](Recursos/mishi-200x200.jpg)
+![Banner del Portafolio](Recursos/mc-200x200.jpg)
 
-## 📋 Descripción
+Un tema de login inspirado en Akatsuki (organización de Naruto), con un diseño oscuro y rojo característico de la organización. Este proyecto implementa una pantalla de inicio de sesión estilizada con elementos visuales distintivos como nubes rojas y un diseño minimalista pero impactante.
 
-Este repositorio contiene el código fuente de mi portafolio personal como Ingeniero de Sistemas. El sitio web está diseñado para mostrar mi experiencia profesional, habilidades técnicas, educación y certificaciones de una manera interactiva y visualmente atractiva.
+![Vista previa del Login Theme](Recursos/LoginAkatsuki.jpg)
 
-## 🚀 Características
-
-- **Diseño Responsivo**: Adaptable a diferentes tamaños de pantalla (móvil, tablet, escritorio)
-- **Modo Oscuro/Claro**: Cambio de tema con persistencia mediante localStorage
-- **Detección Automática**: Reconoce la preferencia de tema del sistema del usuario
-- **Carruseles Interactivos**: Para mostrar educación y habilidades técnicas con navegación e indicadores
-- **Animaciones de Scroll**: Elementos que aparecen con efectos fade-in al hacer scroll
-- **Botón "Volver Arriba"**: Para facilitar la navegación en páginas extensas
-- **Descarga de CV**: Botón para descargar mi currículum en formato PDF
-- **Certificaciones Destacadas**: Sección visual para mostrar mis certificaciones profesionales
-- **Paleta de colores personalizada**: Esquema de color elegante y profesional que se adapta al tema seleccionado
-
-## 🛠️ Tecnologías Utilizadas
-
-- **HTML5**: Estructura semántica
-- **CSS3**: Diseño y estilizado
-  - Variables CSS para la gestión de colores y fuentes
-  - Sistema de temas claro/oscuro con transiciones suaves
-  - Flexbox y Grid para layouts
-  - Media queries para responsive design
-  - Animaciones y transiciones
-- **JavaScript**: Funcionalidades interactivas
-  - Manejo de eventos
-  - Manipulación del DOM
-  - Intersection Observer API para animaciones de scroll
-  - Implementación de carruseles personalizados
-  - Almacenamiento local para preferencias de usuario
-  - Detección de preferencias del sistema
-
-## 🖥️ Vista Previa
-
-![Vista previa del portafolio](https://landingportfoliomc.netlify.app/landingmfcf)
-
-## 📦 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
-portafolio/
-│
-├── landingMFCF.html        # Archivo principal HTML
-├── CVMFCF.pdf              # CV en formato PDF
-├── mishi.jpg               # Foto de perfil
-├── LandingScript.js        # JavaScript con la funcionalidad interactiva
-├── styles.css              # Estilos CSS con soporte para tema claro/oscuro
-├── mishi-200x200.jpg       # Foto de perfil para Markdown
-└── README.md               # Este archivo
+LoginTheme/
+├── Fonts/
+│   └── Bolton Serif Regular.{woff2,woff,ttf}
+├── Recursos/
+│   ├── cloud.png
+│   ├── cloudnitgh.png
+│   └── mc.jpg
+├── AkatsukiThemeLogin.css
+├── AkatsukiThemeLogin.html
+└── AkatsukiThemeLogin.js
 ```
 
-## 🚀 Instalación y Uso
+## Características
 
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/Klooy/portfolio.git
-   ```
-2. Abre el archivo `landingMFCF.html` en tu navegador para ver el sitio localmente
+- Diseño responsive adaptado para móviles y escritorio
+- Tema oscuro con detalles en rojo inspirados en Akatsuki
+- Formulario de login con email y contraseña
+- Opción de login con GitHub
+- Imagen de perfil con borde rojo característico
+- Animaciones y efectos hover en botones
+- Tipografía personalizada "Bolton Serif Regular"
+- Nubes rojas de Akatsuki como elementos decorativos
 
-## 🔍 Características Específicas
+## Tecnologías Utilizadas
 
-### Sistema de Temas (Claro/Oscuro)
-- **Toggle Manual**: Botón flotante para cambiar entre temas claro y oscuro
-- **Persistencia**: Las preferencias se guardan en localStorage
-- **Detección del Sistema**: Detecta automáticamente las preferencias del usuario
-- **Transiciones Suaves**: Cambios de tema con animaciones graduales
+- HTML5
+- CSS3 (con media queries para responsividad)
+- JavaScript
+- Fuentes web personalizadas
 
-### Carruseles Interactivos
-El sitio implementa carruseles personalizados para mostrar información en secciones como Educación y Habilidades Técnicas. Características:
-- Navegación mediante botones (anterior/siguiente)
-- Indicadores visuales de posición actual
-- Transiciones suaves entre elementos
-- Diseño responsive para diferentes dispositivos
+## Instalación
 
-### Animaciones
-- Las secciones se cargan con animaciones fade-in a medida que el usuario hace scroll
-- Utiliza la API Intersection Observer para un rendimiento optimizado
-- Efectos de hover en tarjetas y botones para mejorar la interactividad
+1. Clona este repositorio o descarga los archivos
+2. Asegúrate de mantener la estructura de carpetas intacta
+3. Abre el archivo `AkatsukiThemeLogin.html` en tu navegador
 
-### Diseño Responsive
-- El diseño se adapta a diferentes dispositivos mediante media queries
-- Layout optimizado para móviles, tablets y escritorio
-- Menú y contenido reorganizado para mejor experiencia en pantallas pequeñas
-- Carruseles y secciones con ancho adaptativo según el dispositivo
+## Personalización
 
-### Sección de Certificaciones
-- Diseño visual destacado para mostrar certificaciones profesionales
-- Enlaces directos a la verificación de certificados
-- Iconos y estilizado consistente con el tema seleccionado
+Puedes personalizar varios aspectos del tema:
 
-## 🔄 Mejoras Futuras
+- Cambia las imágenes en la carpeta `Recursos/`
+- Modifica los colores en `AkatsukiThemeLogin.css` (El color principal es `#e4000f`)
+- Ajusta el comportamiento en `AkatsukiThemeLogin.js`
 
-- [ ] Implementar sección de proyectos con capturas de pantalla y enlaces
-- ✅ Añadir un formulario de contacto funcional
-- [ ] Implementar opción de cambio de idioma (Español/Inglés)
-- ✅ Implementar modo Claro/Oscuro
-- [ ] Incorporar filtros para habilidades y experiencia
-- [ ] Optimizar carga de imágenes con lazy loading
-- [ ] Añadir gráficos interactivos para visualizar competencias
+## Vista Previa
 
-## 📄 Licencia
+La página de login presenta:
+- Fondo negro
+- Imagen de perfil circular con borde rojo
+- Título "LOGIN TO YOUR ACCOUNT" en tipografía distintiva
+- Campos para email y contraseña
+- Opción para recuperar contraseña
+- Botón de login principal
+- Separador
+- Botón alternativo para login con GitHub
+- Enlace para registro de nuevos usuarios
+- Nubes rojas características de Akatsuki como elementos decorativos
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
+## Uso
 
-## 📬 Contacto
+Este tema puede ser implementado como:
+- Página de inicio de sesión para sitios web de temática de anime
+- Proyectos relacionados con Naruto
+- Base para desarrollar interfaces con temática similar
 
-- **Email**: mfcorrales26@gmail.com
-- **LinkedIn**: [linkedin.com/in/mfcorrales](https://www.linkedin.com/in/mfcorrales)
-- **Teléfono**: 310 622 6041
-- **Portafolio Web**: [my-portfolio-mc.netlify.app](https://my-portfolio-mc.netlify.app/)
-- **GitHub**: [github.com/Klooy](https://github.com/Klooy)
+## Créditos
 
----
+Diseñado y desarrollado desde cero como un proyecto personal.
+
+## Licencia
+
+[icencia preferida]
 
 ⭐️ Desarrollado con pasión por Michael Felipe Corrales Flórez © 2025
