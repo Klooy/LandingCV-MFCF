@@ -203,6 +203,6 @@ Los iconos y elementos visuales están inspirados en el anime Naruto, específic
 
 ## Licencia
 
-[Licencia preferida]
+[MIT License]
 
 ⭐️ Desarrollado con pasión por Michael Felipe Corrales Flórez © 2025
