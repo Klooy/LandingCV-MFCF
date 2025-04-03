@@ -328,7 +328,7 @@ body {
         width: 100px;
     }
     .cloud-left-top {
-        top: 40px;
+        top: 80px;
         left: 10px;
     }
     .cloud-left-bottom {
@@ -341,6 +341,6 @@ body {
     }
     .cloud-below-itachi {
         width: 100px;
-        top: 135px;
+        top: 130px;
     }
 }
