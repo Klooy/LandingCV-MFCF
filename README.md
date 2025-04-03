@@ -4,6 +4,7 @@
 
 Un tema de login inspirado en Akatsuki (organización de Naruto), con un diseño oscuro y rojo característico de la organización. Este proyecto implementa una pantalla de inicio de sesión estilizada con elementos visuales distintivos como nubes rojas y un diseño minimalista pero impactante.
 
+## Preview Theme Login Experimental
 ![Vista previa del Login Theme](Recursos/LoginAkatsuki.jpg)
 
 ## Estructura del Proyecto
