@@ -201,14 +201,12 @@ Diseñado y desarrollado desde cero como un proyecto personal por Michael Felipe
 
 Los iconos y elementos visuales están inspirados en el anime Naruto, específicamente en la organización Akatsuki.
 
-## Licencia
-
-[MIT License]
-
-## Créditos
-
 Este proyecto utiliza los siguientes recursos de terceros:
 
 * **Fuente:** [Bolton Serif Regular]([https://www.onlinewebfonts.com/download/d1a27156e441d57c37185c3798b630e9]), creada por Emil Bertell. Esta fuente se utiliza bajo una licencia gratuita para uso personal.
+
+## Licencia
+
+[MIT License]
 
 ⭐️ Desarrollado con pasión por Michael Felipe Corrales Flórez © 2025
