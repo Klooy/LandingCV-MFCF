@@ -328,11 +328,11 @@ body {
         width: 100px;
     }
     .cloud-left-top {
-        top: 80px;
+        top: 70px;
         left: 10px;
     }
     .cloud-left-bottom {
-        bottom: 80px;
+        bottom: 110px;
         left: -20px;
     }
     .cloud-right-bottom {
