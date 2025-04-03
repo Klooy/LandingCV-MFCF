@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Bolton Serif Regular';
-    src: url('../Fonts/Bolton\ Serif\ Regular.woff2') format('woff2'),
-         url('../Fonts/Bolton\ Serif\ Regular.woff') format('woff'),
-         url('../Fonts/Bolton\ Serif\ Regular.ttf') format('truetype');
+    src: url('../Fonts/BoltonSerifRegular.woff2') format('woff2'),
+         url('../Fonts/BoltonSerifRegular.woff') format('woff'),
+         url('../Fonts/BoltonSerifRegular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
