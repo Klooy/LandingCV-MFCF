@@ -19,27 +19,41 @@ body {
     position: relative;
 }
 
+/* Contenedor de marco modificado para ser posición relativa */
+.login-frame {
+    border: clamp(1px, 0.2vw, 2px) solid #e4000f;
+    border-radius: clamp(6px, 1.2vw, 12px);
+    padding: clamp(10px, 2vw, 20px);
+    max-width: 500px;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 clamp(7px, 1.5vw, 15px) rgba(228, 0, 15, 0.3);
+    position: relative; /* Para que las nubes se posicionen relativas a este elemento */
+    z-index: 1;
+    overflow: hidden; /* Para asegurar que las nubes no se salgan del marco */
+}
+
 .login-container {
-    border-radius: 8px;
-    padding: 40px;
+    border-radius: clamp(4px, 0.8vw, 8px);
+    padding: clamp(20px, 4vw, 40px);
     text-align: center;
-    width: 400px;
+    width: clamp(280px, 90%, 400px);
     position: relative;
     z-index: 1;
 }
 
 .akatsuki-header {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: clamp(10px, 2vw, 20px);
 }
 
 .itachi-image-container {
-    width: 120px;
-    height: 120px;
+    width: clamp(80px, 12vw, 120px);
+    height: clamp(80px, 12vw, 120px);
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto 50px;
-    border: 3px solid #e4000f;
+    margin: 0 auto clamp(20px, 5vw, 50px);
+    border: clamp(2px, 0.3vw, 3px) solid #e4000f;
     position: relative;
     z-index: 2;
 }
@@ -48,11 +62,11 @@ body {
 .itachi-image-container::before {
     content: '';
     position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border: 2px solid #e4000f;
+    top: clamp(-5px, -1vw, -10px);
+    left: clamp(-5px, -1vw, -10px);
+    right: clamp(-5px, -1vw, -10px);
+    bottom: clamp(-5px, -1vw, -10px);
+    border: clamp(1px, 0.2vw, 2px) solid #e4000f;
     border-radius: 50%;
     z-index: 1;
 }
@@ -66,47 +80,47 @@ body {
 
 .login-title {
     font-family:'Bolton Serif Regular', sans-serif;
-    font-size: 4em;
+    font-size: clamp(2.5em, 5vw, 4em);
     color: #e4000f;
-    margin-bottom: -15px;
+    margin-bottom: clamp(-8px, -1.5vw, -15px);
     font-weight: normal;
-    letter-spacing: 1px;
+    letter-spacing: clamp(0.5px, 0.1vw, 1px);
     font-stretch: condensed;
     line-height: 1;
 }
 
 .login-subtitle {
     color: #e4000f;
-    margin-bottom: 10px;
-    font-size: 1em;
+    margin-bottom: clamp(5px, 1vw, 10px);
+    font-size: clamp(0.8em, 1vw, 1em);
     font-family: sans-serif;
     font-weight: normal;
     opacity: 0.7;
 }
 
 .input-group {
-    margin-bottom: 10px;
+    margin-bottom: clamp(5px, 1vw, 10px);
     text-align: left;
 }
 
 .input-group label {
     display: block;
     color: #e4000f;
-    margin-bottom: 8px;
-    font-size: 1em;
+    margin-bottom: clamp(4px, 0.8vw, 8px);
+    font-size: clamp(0.9em, 1vw, 1em);
     font-weight: normal;
     font-family: sans-serif;
     opacity: 0.7;
 }
 
 .input-field {
-    width: calc(100% - 20px);
-    padding: 12px 10px;
+    width: calc(100% - clamp(10px, 2vw, 20px));
+    padding: clamp(10px, 1.2vw, 12px) clamp(5px, 1vw, 10px);
     border: 1px solid #e4000f;
     background-color: transparent;
     color: #E07A5F; /* Color del valor del campo */
-    border-radius: 4px;
-    font-size: 1em;
+    border-radius: clamp(2px, 0.4vw, 4px);
+    font-size: clamp(0.9em, 1vw, 1em);
     font-weight: normal;
     font-family: sans-serif;
 }
@@ -120,18 +134,18 @@ body {
 
 .password-container .input-field {
     width: 100%; /* Change from calc(100% - 40px) to ensure full width */
-    padding-right: 40px; /* Add right padding to make room for the icon */
+    padding-right: clamp(30px, 4vw, 40px); /* Add right padding to make room for the icon */
     box-sizing: border-box;
 }
 
 /* Estilos para el icono de ojo */
 .toggle-password {
     position: absolute;
-    right: 10px;
+    right: clamp(5px, 1vw, 10px);
     top: 50%;
     transform: translateY(-50%);
-    width: 20px;
-    height: 14px;
+    width: clamp(16px, 2vw, 20px);
+    height: clamp(11px, 1.4vw, 14px);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' fill='%23e4000f'%3E%3Cpath d='M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center;
@@ -158,7 +172,7 @@ body {
 
 .forgot-password {
     float: right;
-    font-size: 0.9em;
+    font-size: clamp(0.8em, 0.9vw, 0.9em);
     color: #777;
     text-decoration: none;
     font-family: sans-serif;
@@ -173,14 +187,14 @@ body {
     font-family: 'Bolton Serif Regular', sans-serif;
     background-color: transparent;
     color: #e4000f;
-    padding: 1px 10px;
-    border: 2px solid #e4000f;
-    border-radius: 5px;
+    padding: clamp(1px, 0.1vw, 1px) clamp(6px, 1vw, 10px);
+    border: clamp(1px, 0.2vw, 2px) solid #e4000f;
+    border-radius: clamp(3px, 0.5vw, 5px);
     cursor: pointer;
-    font-size: 3em;
+    font-size: clamp(1.8em, 3vw, 3em);
     width: 100%;
-    margin-top: 20px;
-    letter-spacing: 1px;
+    margin-top: clamp(10px, 2vw, 20px);
+    letter-spacing: clamp(0.5px, 0.1vw, 1px);
     font-weight: normal;
     text-transform: uppercase;
 }
@@ -192,7 +206,7 @@ body {
 .separator-container {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: clamp(5px, 1vw, 10px) 0;
 }
 
 .separator-line {
@@ -203,8 +217,8 @@ body {
 
 .separator {
     color: #777;
-    padding: 0 10px;
-    font-size: 1em;
+    padding: 0 clamp(5px, 1vw, 10px);
+    font-size: clamp(0.9em, 1vw, 1em);
     font-weight: normal;
     font-family: sans-serif;
 }
@@ -213,17 +227,17 @@ body {
     font-family: 'Bolton Serif Regular', sans-serif;
     background-color: #000;
     color: #e4000f;
-    padding: 3px 10px;
-    border: 2px solid #e4000f;
-    border-radius: 5px;
+    padding: clamp(3px, 0.3vw, 3px) clamp(6px, 1vw, 10px);
+    border: clamp(1px, 0.2vw, 2px) solid #e4000f;
+    border-radius: clamp(3px, 0.5vw, 5px);
     cursor: pointer;
-    font-size: 40px;
+    font-size: clamp(30px, 4vw, 40px);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    letter-spacing: 1px;
+    gap: clamp(8px, 1.5vw, 15px);
+    letter-spacing: clamp(0.5px, 0.1vw, 1px);
     font-weight: normal;
     text-transform: uppercase;
 }
@@ -233,8 +247,8 @@ body {
 }
 
 .github-icon {
-    width: 25px;
-    height: 25px;
+    width: clamp(18px, 2.5vw, 25px);
+    height: clamp(18px, 2.5vw, 25px);
     background-color: #e4000f;
     mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/github.svg') no-repeat center;
     -webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/github.svg') no-repeat center;
@@ -243,8 +257,8 @@ body {
 }
 
 .signup-link {
-    margin-top: 25px;
-    font-size: 0.9em;
+    margin-top: clamp(15px, 2.5vw, 25px);
+    font-size: clamp(0.8em, 0.9vw, 0.9em);
     color: #777;
     font-family: sans-serif;
     font-weight: normal;
@@ -260,43 +274,44 @@ body {
     text-decoration: underline;
 }
 
-/* Akatsuki clouds positioning */
+/* Posicionamiento de nubes Akatsuki actualizado para que sea relativo al login-frame */
 .akatsuki-cloud {
     position: absolute;
-    width: 120px;
-    z-index: -2; /* Para que la nube esté detrás del contenido del login si es necesario */
+    width: clamp(60px, 12vw, 120px);
+    z-index: -1; /* Para que la nube esté detrás del contenido del login */
 }
 
 .cloud-left-top {
-    top: 140px;
-    left: 720px;
+    top: clamp(10px, 4vw, 40px);
+    left: clamp(10px, 4vw, 40px);
 }
 
 .cloud-left-bottom {
-    bottom: 170px;
-    left: 690px;
+    bottom: clamp(45px, 7vw, 70px);
+    left: clamp(-20px, 0.5vw, 5px);
 }
 
 .cloud-right-bottom {
-    bottom: 90px;
-    right: 700px;
+    bottom: clamp(-45px, 1vw, 10px);
+    right: clamp(5px, 2vw, 20px);
 }
 
 .cloud-below-itachi {
-    position: absolute;
-    width: 150px; /* Asegura que tenga el mismo ancho que las otras nubes */
-    z-index: 2; /* Un valor mayor que el z-index del login-container (que es 1) */
-    top: 190px; /* Ajusta este valor para colocar la nube debajo de la imagen de Itachi */
-    left: 49.5%; /* Centra la nube horizontalmente */
-    transform: translateX(-50%); /* Ajusta el centrado horizontal */
+    width: clamp(70px, 12vw, 120px);
+    top: clamp(50px, 10vw, 100px);
+    left: 47%;
+    transform: translateX(-50%);
+    z-index: 2;
 }
 
-/* Media Queries para pantallas más pequeñas (móviles) */
+/* Media Queries ajustadas pero mantenidas para compatibilidad con navegadores antiguos */
 @media screen and (max-width: 767px) {
     .login-container {
         width: 90%;
         padding: 20px;
     }
+    
+    /* Estos estilos son redundantes con clamp pero se mantienen como fallback */
     .login-title {
         font-size: 2.5em;
         margin-bottom: -8px;
@@ -311,7 +326,7 @@ body {
         margin-bottom: 15px;
     }
     .login-button {
-        font-size: 2em;
+        font-size: 1.8em;
         padding: 6px 12px;
         margin-top: 10px;
     }
@@ -325,22 +340,10 @@ body {
         height: 18px;
     }
     .akatsuki-cloud {
-        width: 100px;
+        width: 80px;
     }
-    .cloud-left-top {
-        top: 60px;
-        left: 10px;
-    }
-    .cloud-left-bottom {
-        bottom: 140px;
-        left: -20px;
-    }
-    .cloud-right-bottom {
-        bottom: 20px;
-        right: 10px;
-    }
-    .cloud-below-itachi {
-        width: 100px;
-        top: 130px;
+    .cloud-below-itachi{
+        width: 90px;
+        left: 50%;
     }
 }
