@@ -1,0 +1,128 @@
+/* Estilos para la sección de proyectos */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--card-shadow);
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    position: relative;
+    perspective: 1000px;
+    overflow: hidden;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.project-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.project-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.project-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.project-card:hover .project-content {
+    transform: rotateY(180deg);
+}
+
+.project-front, .project-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.project-front {
+    z-index: 2;
+}
+
+.project-back {
+    transform: rotateY(180deg);
+    background-color: var(--card-bg);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.1rem;
+    font-size: 1.3rem;
+}
+
+.project-card p {
+    color: var(--dark-accent);
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.project-tech {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 0.2rem;
+    margin-top: 0 !important; /* Asegura que no haya espacio extra arriba */
+}
+
+.project-btn, .project-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: -1.0rem;
+    cursor: pointer;
+}
+
+.project-btn:hover, .project-link:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .projects {
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        max-width: 100%;
+    }
+}
