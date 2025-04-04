@@ -6,7 +6,7 @@ Un tema de login inspirado en Akatsuki (organización de Naruto), con un diseño
 
 ## Login Theme Deploy
 
-**Netlify**: [Netlify](https://login-theme-akatsuki.netlify.app/)
+**Netlify**: [Akatsuki Login Theme](https://login-theme-akatsuki.netlify.app/)
 
 ## Preview Theme Login Experimental
 ![Vista previa del Login Theme](Recursos/LoginAkatsuki.jpg)
