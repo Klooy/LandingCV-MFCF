@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Felipe Corrales Flórez - Portafolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme/theme-styles.css">
+    <link rel="stylesheet" href="..ProyectosPersonales/Proyectos.css">
 </head>
 <body>
     <header id="top">
@@ -200,6 +202,77 @@
             </svg>
         </button>
 
+        <section class="section fade-in">
+            <h2 class="section-title">Proyectos Personales</h2>
+            
+            <div class="projects">
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="Recursos/LoginTheme.jpg" alt="Login Con Tema Personalizado" class="project-bg-image">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-front">
+                            <h3>Login Con Tema Personalizado</h3>
+                            <p>Abril 2025</p>
+                            <a href="#" class="project-btn" data-project="proyecto1">Ver Proyecto</a>
+                        </div>
+                        <div class="project-back">
+                            <h3>Login Con Tema Personalizado</h3>
+                            <p class="project-description">
+                                Un tema de login inspirado en Akatsuki (organización de Naruto), con un diseño oscuro y rojo característico de la organización. 
+                                Este proyecto implementa una pantalla de inicio de sesión estilizada con elementos visuales distintivos como nubes rojas y un diseño minimalista pero impactante.
+                            </p>
+                            <p class="project-tech">Tecnologías: HTML5, CSS3 y JavaScript</p>
+                            <a href="https://login-theme-akatsuki.netlify.app/" target="_blank" class="project-link">Ver Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="Recursos/PortfolioTypeDeskopt.jpg" alt="MC Portfolio Type Desktop" class="project-bg-image">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-front">
+                            <h3>MC Portfolio Type Desktop</h3>
+                            <p>Diciembre 2024</p>
+                            <a href="#" class="project-btn" data-project="proyecto2">Ver Proyecto</a>
+                        </div>
+                        <div class="project-back">
+                            <h3>MC Portfolio Type Desktop</h3>
+                            <p class="project-description">
+                                Un sitio web interactivo inspirado en una computadora de escritorio, creado con React y Tailwind CSS. El proyecto presenta una interfaz única que imita el entorno de un sistema operativo, 
+                                lo que permite a los visitantes explorar diferentes aspectos de mi experiencia profesional a través de un diseño atractivo e intuitivo.
+                            </p>
+                            <p class="project-tech">Tecnologías: React.js18, Node.js, Tailwind CSS, Lucide React</p>
+                            <a href="https://my-portfolio-mc.netlify.app/" target="_blank" class="project-link">Ver Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="Recursos/Noticieromc.jpg" alt="Noticiero Digital MC" class="project-bg-image">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-front">
+                            <h3>Noticiero Digital MC</h3>
+                            <p>Enero 2025</p>
+                            <a href="#" class="project-btn" data-project="proyecto3">Ver Proyecto</a>
+                        </div>
+                        <div class="project-back">
+                            <h3>Noticiero Digital MC</h3>
+                            <p class="project-description">
+                                Noticiero Digital es una aplicación web que muestra noticias actualizadas de diversas categorías (general, negocios, entretenimiento, etc.) utilizando la API pública de News API. 
+                                El sistema presenta una interfaz limpia y amigable para el usuario, con tarjetas de noticias, paginación y filtrado por categorías.
+                            </p>
+                            <p class="project-tech">Tecnologías: PHP, Bootstrap 5, HTML5, CSS</p>
+                            <a href="https://aee6f7e1-903f-457a-ae85-bc06a6b497a8-00-20ctk0gz9c2ml.worf.replit.dev/" target="_blank" class="project-link">Ver Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
        
 <section class="section fade-in">
     <h2 class="section-title">Certificaciones</h2>
@@ -297,6 +370,7 @@
                             <h3><span>🛠️</span>Herramientas y Tecnologías</h3>
                             <ul class="skill-list">
                                 <li>Git y GitHub</li>
+                                <li>AWS</li>
                                 <li>Control de versiones</li>
                                 <li>Despliegue de aplicaciones</li>
                             </ul>
@@ -381,6 +455,19 @@
 
     <a href="#top" class="back-to-top" id="backToTop">↑</a>
     <script src="LandingScript.js"></script>
-    
+    <script src="theme/theme-switcher.js"></script>
+    <script src="../ProyectosPersonales/Proyectos.js"></script>
+    ``<script>
+        // Inicializar el ThemeSwitcher cuando el DOM esté listo
+        //document.addEventListener('DOMContentLoaded', () => {
+            // Crear una instancia del ThemeSwitcher con opciones personalizadas (opcionales)
+            //const themeSwitcher = new ThemeSwitcher({
+                //buttonId: 'theme-toggle',       // ID del botón
+                //storageKey: 'theme',            // Clave para localStorage
+                //defaultTheme: 'light',          // Tema predeterminado
+                //useSystemPreference: true       // Usar preferencia del sistema
+            //});
+        //});
+    </script>``
 </body>
 </html>
