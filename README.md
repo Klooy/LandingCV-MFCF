@@ -2,7 +2,7 @@
 
 ![Banner del Portafolio](Recursos/mishi-200x200.jpg)
 
-## Login Theme Deploy
+## Landing Portfolio Deployt
 
 **Netlify**: [Landing Portfolio MFCF](https://landingportfoliomc.netlify.app/)
 
