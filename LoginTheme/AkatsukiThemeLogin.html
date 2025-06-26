@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Akatsuki</title>
+    <link rel="stylesheet" href="AkatsukiThemeLogin.css">
+</head>
+<body>
+    <!-- Añadido el contenedor login-frame que ahora contiene las nubes -->
+    <div class="login-frame">
+        <!-- Imágenes de nubes Akatsuki ahora dentro del login-frame -->
+        <img src="../LoginTheme/Recursos/cloud.png" alt="Akatsuki Cloud" class="akatsuki-cloud cloud-left-top">
+        <img src="../LoginTheme/Recursos/cloud.png" alt="Akatsuki Cloud" class="akatsuki-cloud cloud-left-bottom">
+        <img src="../LoginTheme/Recursos/cloud.png" alt="Akatsuki Cloud" class="akatsuki-cloud cloud-right-bottom">
+        <img src="../LoginTheme/Recursos/cloudnitgh.png" alt="Akatsuki Cloud" class="akatsuki-cloud cloud-below-itachi">
+        
+        <div class="login-container">
+            <div class="akatsuki-header">
+                <div class="itachi-image-container">
+                    <img src="../LoginTheme/Recursos/mc.jpg" alt="Itachi Uchiha" class="itachi-image">
+                </div>
+                <h1 class="login-title">LOGIN TO YOUR ACCOUNT</h1>
+            </div>
+            <p class="login-subtitle">Enter your email below to login to your account</p>
+            <form>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="input-field" value="m@example.com">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" class="input-field">
+                        <span class="toggle-password" id="togglePassword"></span>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot your <span style="color: #e4000f;">password</span>?</a>
+                </div>
+                <button type="submit" class="login-button">LOGIN</button>
+            </form>
+            <div class="separator-container">
+                <div class="separator-line"></div>
+                <p class="separator">Or continue <span style="font-weight: bold">with</span></p>
+                <div class="separator-line"></div>
+            </div>
+            <button class="github-login-button">
+                <span class="github-icon"></span>
+                LOGIN WITH GITHUB
+            </button>
+            <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+        <div class="personal-brand">
+            <a href="https://github.com/Klooy/LandingCV-MFCF/tree/LoginTheme" target="_blank">Creado Por MC</a>
+        </div>
+    </div>
+    <script src="AkatsukiThemeLogin.js"></script>
+</body>
+</html>
