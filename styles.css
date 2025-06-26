@@ -582,3 +582,421 @@ margin-top: 15px;
         border-radius: 20px; /* Opcional: suaviza las esquinas */
       }
   }
+
+
+  /* ====== ANIMACIONES Y EFECTOS MEJORADOS ====== */
+
+/* Animación de partículas flotantes en el header */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes floatReverse {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(10px); }
+}
+
+/* Partículas decorativas */
+header::before,
+header::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+header::before {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+header::after {
+    top: 30%;
+    right: 15%;
+    animation: floatReverse 4s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+/* Efecto de typing para el nombre */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.header-text h1 {
+    position: relative;
+    overflow: hidden;
+    border-right: 3px solid var(--accent-color);
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink 1s infinite;
+}
+
+/* Efectos hover mejorados para tarjetas */
+.education-item, 
+.experience-item, 
+.certification-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.education-item::before, 
+.experience-item::before, 
+.certification-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.education-item:hover::before, 
+.experience-item:hover::before, 
+.certification-item:hover::before {
+    left: 100%;
+}
+
+/* Animación de entrada progresiva para elementos */
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Aplicar animaciones con clases específicas */
+.slide-in-left {
+    animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+.slide-in-bottom {
+    animation: slideInFromBottom 0.6s ease-out forwards;
+}
+
+/* Efectos de pulsación para botones */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.contact-links a:hover,
+.project-link:hover,
+.certification a:hover {
+    animation: pulse 0.3s ease;
+}
+
+/* Efecto de ondas para la foto de perfil */
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+.profile-container {
+    position: relative;
+}
+
+.profile-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    opacity: 0;
+    animation: ripple 2s infinite;
+}
+
+.profile-container:hover::before {
+    animation-play-state: paused;
+    opacity: 0.3;
+}
+
+/* Animación de contador para elementos numéricos */
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.item-date {
+    animation: countUp 0.5s ease-out;
+}
+
+/* Efecto de brillo para skill tags */
+@keyframes shine {
+    0% { background-position: -100px; }
+    100% { background-position: 100px; }
+}
+
+.skill-tag {
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.skill-tag:hover::before {
+    left: 100%;
+}
+
+/* Animación de carga progresiva para las barras de habilidades */
+@keyframes loadProgress {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+.skill-list li {
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-list li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--accent-color);
+    transition: width 0.8s ease;
+}
+
+.skill-list li:hover::after {
+    width: 100%;
+}
+
+/* Efectos de zoom suave para imágenes */
+.project-bg-image {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-bg-image {
+    transform: scale(1.1);
+}
+
+/* Animación de rotación para iconos */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.certification-icon {
+    transition: transform 0.3s ease;
+}
+
+.certification:hover .certification-icon {
+    animation: rotate 0.5s ease;
+}
+
+/* Efecto de escritura para secciones */
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.section-title {
+    position: relative;
+    overflow: hidden;
+    border-right: 2px solid var(--accent-color);
+    white-space: nowrap;
+    animation: typewriter 1s steps(20, end) forwards;
+}
+
+/* Animación de desvanecimiento para el scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto parallax suave para el fondo */
+.intro {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Animación de entrada para el carousel */
+@keyframes carouselSlide {
+    from { transform: translateX(20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.carousel-item {
+    animation: carouselSlide 0.5s ease-out;
+}
+
+/* Efecto de glassmorphism para las tarjetas */
+.education-item, 
+.experience-item, 
+.certification-item {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animación de loading para botones */
+@keyframes loading {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.download-cv {
+    position: relative;
+    overflow: hidden;
+    background-size: 200% 200%;
+}
+
+.download-cv:hover {
+    background: linear-gradient(45deg, var(--accent-color), var(--secondary-color), var(--accent-color));
+    background-size: 200% 200%;
+    animation: loading 2s ease infinite;
+}
+
+/* Efecto de ondas en el footer */
+footer::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+}
+
+footer {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animación de entrada para elementos con intersection observer */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efecto de magnetic hover para botones importantes */
+@keyframes magnetic {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(2px, -2px); }
+    50% { transform: translate(-2px, 2px); }
+    75% { transform: translate(2px, 2px); }
+    100% { transform: translate(0, 0); }
+}
+
+.back-to-top:hover {
+    animation: magnetic 0.5s ease;
+}
+
+/* Responsive adjustments para animaciones */
+@media (max-width: 768px) {
+    .header-text h1 {
+        animation: none;
+        border-right: none;
+    }
+    
+    .section-title {
+        animation: none;
+        border-right: none;
+    }
+    
+    /* Reducir animaciones en dispositivos móviles para mejor rendimiento */
+    .profile-container::before {
+        display: none;
+    }
+}
+
+/* Animación de entrada escalonada para listas */
+.skill-list li:nth-child(1) { animation-delay: 0.1s; }
+.skill-list li:nth-child(2) { animation-delay: 0.2s; }
+.skill-list li:nth-child(3) { animation-delay: 0.3s; }
+.skill-list li:nth-child(4) { animation-delay: 0.4s; }
+.skill-list li:nth-child(5) { animation-delay: 0.5s; }
+.skill-list li:nth-child(6) { animation-delay: 0.6s; }
+.skill-list li:nth-child(7) { animation-delay: 0.7s; }
+
+/* Efecto de iluminación para elementos importantes */
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 5px var(--accent-color); }
+    50% { box-shadow: 0 0 20px var(--accent-color), 0 0 30px var(--accent-color); }
+}
+
+.contact-form-link:hover {
+    animation: glow 1s ease-in-out infinite;
+}
+
+/* Animación de entrada para el contenido principal */
+main {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Efecto de ondulación para el header */
+@keyframes headerWave {
+    0%, 100% { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    50% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); }
+}
+
+header {
+    animation: headerWave 8s ease-in-out infinite;
+}
